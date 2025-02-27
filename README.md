@@ -1,40 +1,57 @@
-# Muzammil Codesoft - Modern Landing Page
+# TechVision Studio - Modern Web Solutions
 
-A modern, responsive landing page built with React, TypeScript, and Tailwind CSS. Features smooth animations, clean design, and a great user experience.
+A professional, responsive landing page showcasing our web development expertise. Built with modern technologies and best practices.
 
-## Features
+## 🚀 Features
 
-- 🎨 Modern UI/UX with a professional design
-- ⚡ Lightning-fast performance
-- 📱 Fully responsive design
-- 🔄 Smooth animations and transitions
-- 🎯 Clear call-to-actions
-- 🛠️ Built with modern tech stack
+- Modern, responsive design optimized for all devices
+- Custom animations and transitions
+- Performance-optimized code
+- Professional UI/UX with attention to detail
+- Secure and scalable architecture
 
-## Tech Stack
+## 🛠️ Technology Stack
 
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Shadcn UI
-- Lucide Icons
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Framer Motion for animations
+- ShadcnUI components
+- Modern tooling and build system
 
-## Sections
+## 📋 Project Structure
 
-- Hero section with animated gradient background
-- Features showcase with interactive cards
-- About section with testimonials
-- Contact form with validation
-- Responsive navigation and footer
+```
+src/
+├── components/
+│   ├── layout/      # Layout components
+│   ├── sections/    # Page sections
+│   └── ui/          # Reusable UI components
+├── lib/             # Utilities and helpers
+└── pages/          # Page components
+```
 
-## Getting Started
+## 🔧 Development
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open [http://localhost:5000](http://localhost:5000)
+Prerequisites:
+- Node.js 18+
+- npm or yarn
 
-## License
+Setup:
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 🌐 Deployment
+
+The site is automatically deployed to GitHub Pages on push to main branch.
+
+## 📝 License
 
 MIT License

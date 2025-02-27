@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="text-xl font-bold">
-              Muzammil Codesoft
+              TechVision Studio
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Building the future of digital experiences, one pixel at a time.
+              Crafting exceptional digital experiences with innovation and precision.
             </p>
           </div>
 
@@ -26,12 +26,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Pricing
+                  Solutions
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Documentation
+                  Enterprise
                 </a>
               </li>
             </ul>
@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Blog
+                  Careers
                 </a>
               </li>
               <li>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Muzammil Codesoft. All rights reserved.</p>
+          <p>&copy; {currentYear} TechVision Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>
