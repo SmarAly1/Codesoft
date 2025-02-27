@@ -12,9 +12,16 @@ vite.config.ts.*
 .idea
 build
 coverage
+# Remove Replit files from git
 .replit
 .cache
 replit.nix
 .config
 .upm
 .breakpoints
+.replrc
+.replit-*
+# Other build artifacts
+*.swp
+*.swo
+.vercel
