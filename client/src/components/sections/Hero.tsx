@@ -13,7 +13,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Transform Your Digital Experience
+              Welcome to Muzammil Codesoft
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
               Experience the next generation of web solutions that bring your ideas to life.

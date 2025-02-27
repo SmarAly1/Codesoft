@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="text-xl font-bold">
-              Company
+              Muzammil Codesoft
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Building the future of digital experiences, one pixel at a time.
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Company. All rights reserved.</p>
+          <p>&copy; {currentYear} Muzammil Codesoft. All rights reserved.</p>
         </div>
       </div>
     </footer>
