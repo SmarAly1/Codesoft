@@ -1,69 +1,100 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Zap, Shield, Smartphone } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Zap, Shield, Smartphone, ArrowUpRight } from "lucide-react";
 
 const features = [
   {
-    title: "Lightning Fast",
-    description: "Optimized performance that keeps your applications running smoothly",
+    title: "Performance Optimization",
+    description: "Lightning-fast solutions that keep your applications running at peak efficiency",
     icon: Zap,
-    image: "https://images.unsplash.com/photo-1559752562-1513aa167782",
+    gradient: "from-blue-500/20 to-purple-500/20",
   },
   {
-    title: "Secure by Design",
-    description: "Enterprise-grade security to protect your valuable data",
+    title: "Secure Architecture",
+    description: "Enterprise-grade security implementation with modern best practices",
     icon: Shield,
-    image: "https://images.unsplash.com/photo-1653389526309-f8e2e75f8aaf",
+    gradient: "from-green-500/20 to-emerald-500/20",
   },
   {
-    title: "Mobile First",
-    description: "Responsive design that works seamlessly across all devices",
+    title: "Responsive Design",
+    description: "Seamless experiences across all devices and screen sizes",
     icon: Smartphone,
-    image: "https://images.unsplash.com/photo-1653389527532-884074ac1c65",
+    gradient: "from-orange-500/20 to-red-500/20",
   },
 ];
 
 export default function Features() {
-  return (
-    <section id="features" className="py-24 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold">Why Choose Us</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Discover the features that set us apart
-          </p>
-        </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+
+      <div className="container mx-auto px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold inline-flex items-center gap-2">
+            Our Expertise
+            <span className="text-primary/80">
+              <ArrowUpRight className="w-6 h-6" />
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Discover how our specialized solutions can elevate your digital presence
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-8"
+        >
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              variants={cardVariants}
+              className="group"
             >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+              <Card className="relative h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                <CardContent className="relative p-6 flex flex-col h-full">
+                  <div className="mb-4 p-3 rounded-lg bg-primary/5 w-fit">
                     <feature.icon className="h-6 w-6 text-primary" />
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">{feature.description}</p>
-                  <div className="aspect-video rounded-lg overflow-hidden">
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    />
+                  </div>
+
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground flex-grow">{feature.description}</p>
+
+                  <div className="mt-4 flex items-center text-sm text-primary">
+                    <span className="group-hover:underline">Learn more</span>
+                    <ArrowUpRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
