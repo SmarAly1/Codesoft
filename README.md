@@ -23,7 +23,7 @@ A professional, responsive landing page showcasing our web development expertise
 ```
 src/
 ├── components/
-│   ├── layout/      # Layout components
+│   ├── layout/      # Layout components 
 │   ├── sections/    # Page sections
 │   └── ui/          # Reusable UI components
 ├── lib/             # Utilities and helpers
@@ -35,6 +35,7 @@ src/
 Prerequisites:
 - Node.js 18+
 - npm or yarn
+- Git
 
 Setup:
 ```bash
@@ -50,7 +51,34 @@ npm run build
 
 ## 🌐 Deployment
 
-The site is automatically deployed to GitHub Pages on push to main branch.
+The site is automatically deployed to GitHub Pages on push to the main branch.
+
+### Deployment Steps:
+1. Fork or clone this repository
+2. Configure GitHub Pages in your repository settings:
+   - Go to Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: gh-pages / root
+   - Click Save
+3. Push your changes to the main branch
+4. GitHub Actions will automatically build and deploy your site
+
+### Deployment Prerequisites:
+- GitHub account with permission to create/manage repositories
+- Git installed locally
+- Node.js 18+ installed
+- Repository secrets configured (if needed)
+
+### Troubleshooting Deployment:
+- Check GitHub Actions tab for build logs
+- Ensure all dependencies are properly listed in package.json
+- Verify GitHub Pages is enabled in repository settings
+- Check browser console for any resource loading errors
+- If routes are not working:
+  - Ensure VITE_BASE_URL is set correctly in your environment
+  - Check that all links use relative paths
+  - Clear browser cache after deployment
+  - Wait a few minutes for DNS propagation
 
 ## 📝 License
 
