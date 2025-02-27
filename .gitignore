@@ -12,3 +12,9 @@ vite.config.ts.*
 .idea
 build
 coverage
+.replit
+.cache
+replit.nix
+.config
+.upm
+.breakpoints
